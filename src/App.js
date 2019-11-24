@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import ContainerMain from "./componets/main/container-main";
+import ContainerUser from "./componets/user/container-user";
+import {BrowserRouter, Route} from "react-router-dom";
+import Header from "./componets/header/Header";
+import ContainerEdit from "./componets/edit/edit-container";
+import ContainerCreater from "./componets/create/creater-container";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [useId, fUserId] = useState(0);
+    function UserId(id) {
+        fUserId(id)
+        console.log(id)
+    }
+
+
+    return (
+        <BrowserRouter>
+            <Header/>
+            <div className="App">
+                <Route exact path="/" render={()=>{
+                    return <ContainerMain UserId={UserId}/>
+                }} />
+                <Route path="/PageUser/" render={()=>{
+                    return <ContainerUser useId={useId}/>
+                }} />
+                <Route path="/PageEditUser/" render={()=>{
+                    return <ContainerEdit userId={useId}/>
+                }} />
+                <Route path="/PageCreaterUser/" render={()=>{
+                    return <ContainerCreater/>
+                }} />
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;
