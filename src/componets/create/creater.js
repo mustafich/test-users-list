@@ -89,7 +89,7 @@ export default class Creater extends React.Component {
         return (
             <div>
                 <div className="mainText">
-                    <h2>Создать пользователя:{this.state.userId}</h2>
+                    <h2>Редактировать пользователя:{this.state.userId}</h2>
                 </div>
                 <div className="edit">
                     <div className="edit-block">

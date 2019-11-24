@@ -10,7 +10,7 @@ function App() {
     const [useId, fUserId] = useState(0);
     function UserId(id) {
         fUserId(id)
-        console.log(id)
+
     }
 
 

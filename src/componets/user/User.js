@@ -3,7 +3,6 @@ import {Route} from "react-router-dom";
 import "./css/main.css"
 
 const User = ({useId}) => {
-    console.log(useId)
 if (useId === null) {
     return (
         <div className="loading">

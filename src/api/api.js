@@ -26,7 +26,6 @@ class UserApii {
          const newStorage = storage.filter(item =>{
              return item.id !== id
          })
-         console.log("filter",newStorage)
          if(!isInList){
              localStorage.setItem('users',JSON.stringify(newStorage))
 
@@ -44,14 +43,10 @@ class UserApii {
 }
 class addUser {
     add = async (state) => {
-        return axios(`http://frontend-candidate.dev.sdh.com.ua/v1/contact/`, {
-            method: 'POST',
-            body:{...state}
-        }).then(response => response.json()).catch(()=>{
-            const storage = JSON.parse(localStorage.getItem('users'));
-            storage.push({...state,id:Math.floor(Math.random() * Math.floor(1000))})
-            localStorage.setItem('users',JSON.stringify(storage))
-        })
+        debugger
+        const storage = JSON.parse(localStorage.getItem('users'));
+        storage.push({...state,id:Math.floor(Math.random() * Math.floor(1000))})
+        localStorage.setItem('users',JSON.stringify(storage))
     }
 
 }

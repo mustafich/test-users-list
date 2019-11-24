@@ -35,11 +35,11 @@ export default class ContainerMain extends React.Component{
          return element.id === id
          }
         const isInList = this.state.allUserOrigin.find(isPrime)
-         console.log("find",isInList)
+
 
       deleteUserApi.getDeleteUser(id,isInList).then(()=>{
           allUserApi.getApp().then(data => {
-              console.log(data)
+
               this.setState({
                   allUser: JSON.parse(localStorage.getItem("users"))
               })

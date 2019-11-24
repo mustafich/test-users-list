@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React from "react"
 
 import "./css/edit.css"
 import {addUserApi} from "../../api/api";
@@ -19,7 +19,6 @@ export default class Edit extends React.Component{
         isValid: false
     }
     componentWillReceiveProps(nextProps){
-        debugger
         this.setState({
             fields:{
                 first_name:nextProps.user.first_name,
@@ -40,14 +39,14 @@ export default class Edit extends React.Component{
                 isValid: false
             })
             if (event.target.value.length <= validCount) {
-                console.log(this.state.fields)
+
                 this.setState({
                     fields: {
                         ...this.state.fields,
                         [event.target.name]: event.target.value
                     }
                 }, (e) => {
-                    console.log(e)
+
                 });
             }
         }
@@ -61,7 +60,7 @@ export default class Edit extends React.Component{
                     [event.target.name]: event.target.value
                 }
             }, () => {
-                console.log(this.state.fields)
+
             });
         }
         if (event.target.type === 'checkbox') {
@@ -74,14 +73,14 @@ export default class Edit extends React.Component{
                     [event.target.name]: event.target.checked
                 }
             }, () => {
-                console.log(this.state.fields)
+
             });
         }
     }
 
 
     editF(state) {
-        console.log(this.state.fields.first_name && this.state.fields.last_name && this.state.fields.biography && this.state.fields.job)
+
         if (this.state.fields.first_name && this.state.fields.last_name && this.state.fields.biography && this.state.fields.job) {
             addUserApi.add(state)
             window.location.href = "http://localhost:3000/"
@@ -94,7 +93,7 @@ export default class Edit extends React.Component{
     }
 
     render() {
-console.log(this.state)
+
         if (this.props.user === "") {
             return (
                 <div className="loading">

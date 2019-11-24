@@ -8,7 +8,6 @@ export default class ContainerEdit extends React.Component{
     state = {
         userId:this.props.userId,
         user:""
-
     }
     componentDidMount() {
         UserApi.getUser(this.state.userId).then(data => {
