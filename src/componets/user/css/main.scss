@@ -1,0 +1,47 @@
+.user {
+  display: flex;
+  justify-content: center;
+  i {
+    cursor: pointer;
+    font-size: 44px;
+    color: black;
+
+
+  }
+  p {
+    font-size: 28px;
+    color: black;
+  }
+  &-block {
+width: 800px;
+    &_buttSetting {
+      cursor: pointer;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      text-align: center;
+      background: green;
+      font-size: 26px;
+      border-radius: 6px;
+      color: white;
+      padding: 20px;
+      width: 220px;
+    }
+    &_buttDelete {
+      cursor: pointer;
+      text-align: center;
+      background: #ff683d;
+      font-size: 26px;
+      border-radius: 6px;
+      color: white;
+      padding: 20px;
+      width: 220px;
+    }
+    &_text {
+
+      display: flex;
+      p {
+        display: block;
+      }
+    }
+  }
+}

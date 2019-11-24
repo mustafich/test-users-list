@@ -1,0 +1,32 @@
+.edit {
+  display: flex;
+  justify-content: center;
+}
+.edit-block {
+  width: 800px;
+}
+.edit-block_text {
+  align-items: center;
+  display: flex;
+}
+.edit-block_text p {
+  font-size: 26px;
+  color: #000;
+}
+.edit-block_text input {
+  margin-left: 40px;
+  height: 25px;
+}
+.edit-block_text select {
+  margin-left: 40px;
+  height: 25px;
+}
+.edit-block_text button {
+  padding: 20px;
+  background: #167f92;
+  cursor: pointer;
+  color: white !important;
+  font-size: 28px;
+}
+
+/*# sourceMappingURL=edit.css.map */

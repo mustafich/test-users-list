@@ -1,0 +1,46 @@
+.user {
+  display: flex;
+  justify-content: center;
+}
+.user i {
+  cursor: pointer;
+  font-size: 44px;
+  color: black;
+}
+.user p {
+  font-size: 28px;
+  color: black;
+}
+.user-block {
+  width: 800px;
+}
+.user-block_buttSetting {
+  cursor: pointer;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  background: green;
+  font-size: 26px;
+  border-radius: 6px;
+  color: white;
+  padding: 20px;
+  width: 220px;
+}
+.user-block_buttDelete {
+  cursor: pointer;
+  text-align: center;
+  background: #ff683d;
+  font-size: 26px;
+  border-radius: 6px;
+  color: white;
+  padding: 20px;
+  width: 220px;
+}
+.user-block_text {
+  display: flex;
+}
+.user-block_text p {
+  display: block;
+}
+
+/*# sourceMappingURL=main.css.map */

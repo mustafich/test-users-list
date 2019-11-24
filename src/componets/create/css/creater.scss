@@ -1,0 +1,12 @@
+.creater{
+  display: flex;
+  justify-content: center;
+  margin:50px 50px;
+  &-butt {
+    padding: 0 30px 0 30px;
+    background: #167f92;
+    cursor: pointer;
+    color: white !important;
+    font-size: 28px;
+  }
+}
